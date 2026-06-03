@@ -62,9 +62,111 @@ footer {
   text-decoration: underline;
 }
 
+/* OM MIG */
+
+/* Mobil først */
+.ommig {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.ommig h1 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--accent);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.ommig h2 {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.ommig-tekst p {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--accent);
+}
+
+.ommig-billede img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+/* Placeholder hvis billede mangler */
+.ommig-billede {
+  background-color: var(--bg-light);
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+/* MIT FØRSTE SEMESTER */
+.semester {
+  border-top: 1px solid #ddd;
+}
+
+.semester h2 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--accent);
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.semester p {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--accent);
+}
+
 /* MOBIL */
 @media (min-width: 768px) {
   .hero h1 {
     font-size: 12rem;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .ommig {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4rem;
+    padding: 4rem;
+  }
+
+  .ommig-venstre {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1;
+  }
+  .ommig-tekst {
+    flex: 1;
+  }
+
+  .ommig-billede {
+    flex: 1;
+    min-height: 400px;
+  }
+
+  .ommig h1 {
+    font-size: 4rem;
+  }
+
+  .semester h2 {
+    font-size: 3rem;
   }
 }
