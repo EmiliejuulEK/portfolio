@@ -1,0 +1,136 @@
+/* CUSTOM PROPERTIES */
+:root {
+  --accent: #ff374b;
+  --text: #000000;
+  --bg: #f7f6f0;
+  --bg-light: #fffefe;
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE — mobil først */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* HEADER & NAVIGATION — mobil først */
+header {
+  padding: 1.5rem 2rem;
+  background-color: var(--bg);
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* Hamburger — synlig på mobil */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--text);
+}
+
+/* Nav-links — skjult på mobil */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg);
+  padding: 2rem;
+  gap: 1.5rem;
+  list-style: none;
+  z-index: 10;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.nav-links a {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* FOOTER — mobil først */
+footer {
+  padding: 2rem;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--accent);
+}
+
+/* DESKTOP — min-width: 768px */
+@media (min-width: 768px) {
+  /* Navigation */
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    padding: 0;
+    gap: 2rem;
+  }
+}
