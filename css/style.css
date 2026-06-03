@@ -1,3 +1,70 @@
 /* Indhold til de enkelte sider
    fx hero, projektkort, om-mig sektion
    tilføjes her efterhånden */
+
+/* HERO */
+.hero {
+  padding: 4rem 2rem 2rem 2rem;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--accent);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.undertitel {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-top: 2rem;
+}
+
+/* INTRO */
+.intro {
+  padding: 4rem 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--accent);
+}
+
+.intro p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 2rem;
+  border-top: 1px solid var(--text);
+  font-family: var(--font-heading);
+  font-style: italic;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-nav a {
+  font-family: var(--font-heading);
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* MOBIL */
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 12rem;
+  }
+}
