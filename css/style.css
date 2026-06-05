@@ -131,6 +131,91 @@ footer {
   color: var(--accent);
 }
 
+/* ===========================
+   KONTAKT
+=========================== */
+.kontakt {
+  padding: 4rem 2rem;
+  max-width: 600px;
+}
+
+.kontakt h2 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.kontakt p {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+/* Formular */
+.formular-gruppe {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+input,
+textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.8rem 0;
+  border: none;
+  border-bottom: 1px solid var(--text);
+  background: transparent;
+  color: var(--text);
+  outline: none;
+  width: 100%;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+
+input:focus,
+textarea:focus {
+  border-bottom: 1px solid var(--accent);
+}
+
+textarea {
+  resize: none;
+}
+
+.formular-knap {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text);
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--text);
+  padding: 0.5rem 0;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+}
+
+.formular-knap:hover {
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+
 /* MOBIL */
 @media (min-width: 768px) {
   .hero h1 {
@@ -138,9 +223,7 @@ footer {
   }
 }
 
-/* ===========================
-   PROJEKTER
-=========================== */
+/* PROJEKTER */
 .projekter {
   padding: 3rem 2rem;
 }
@@ -275,6 +358,16 @@ summary::-webkit-details-marker {
 
   .semester h2 {
     font-size: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .kontakt {
+      padding: 4rem;
+    }
+
+    .kontakt h2 {
+      font-size: 3rem;
+    }
   }
 }
 /* DESKTOP - projekter */
