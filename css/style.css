@@ -369,26 +369,72 @@ summary::-webkit-details-marker {
       font-size: 3rem;
     }
   }
-}
-/* DESKTOP - projekter */
-@media (min-width: 768px) {
-  .tema-header {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 3rem;
-  }
 
-  .tema-billede {
-    width: 40%;
-    flex-shrink: 0;
-    aspect-ratio: 4 / 3;
-  }
-
-  details {
+  /* billeder til projekter */
+  .slideshow {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
   }
 
-  .projekter h1 {
-    font-size: 5rem;
+  .slides {
+    position: relative;
+    width: 100%;
+  }
+
+  .slide {
+    display: none;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .slide.aktiv {
+    display: block;
+  }
+
+  .slideshow-knapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+
+  .slide-knap {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--accent);
+    padding: 0;
+  }
+
+  .slide-knap:hover {
+    opacity: 0.7;
+  }
+
+  /* DESKTOP - projekter */
+  @media (min-width: 768px) {
+    .tema-header {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 3rem;
+    }
+
+    .tema-billede {
+      width: 40%;
+      flex-shrink: 0;
+      aspect-ratio: 4 / 3;
+    }
+
+    details {
+      flex: 1;
+    }
+
+    .projekter h1 {
+      font-size: 5rem;
+    }
   }
 }
