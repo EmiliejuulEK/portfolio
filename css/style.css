@@ -1,8 +1,4 @@
-/* Indhold til de enkelte sider
-   fx hero, projektkort, om-mig sektion
-   tilføjes her efterhånden */
-
-/* HERO */
+/* HERO - mobil først */
 .hero {
   padding: 4rem 2rem 2rem 2rem;
 }
@@ -25,7 +21,7 @@
   margin-top: 2rem;
 }
 
-/* INTRO */
+/* INTRO - mobil først */
 .intro {
   padding: 4rem 2rem;
   max-width: 500px;
@@ -40,7 +36,7 @@
   line-height: 1.8;
 }
 
-/* FOOTER */
+/* FOOTER - mobil først */
 footer {
   display: flex;
   justify-content: space-between;
@@ -62,9 +58,7 @@ footer {
   text-decoration: underline;
 }
 
-/* OM MIG */
-
-/* Mobil først */
+/* OM MIG - mobil først */
 .ommig {
   padding: 3rem 2rem;
   display: flex;
@@ -95,13 +89,6 @@ footer {
   color: var(--accent);
 }
 
-.ommig-billede img {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-}
-
-/* Placeholder hvis billede mangler */
 .ommig-billede {
   background-color: var(--bg-light);
   border: 1px solid #ddd;
@@ -111,7 +98,13 @@ footer {
   min-height: 300px;
 }
 
-/* MIT FØRSTE SEMESTER */
+.ommig-billede img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+/* MIT FØRSTE SEMESTER - mobil først */
 .semester {
   border-top: 1px solid #ddd;
 }
@@ -131,9 +124,7 @@ footer {
   color: var(--accent);
 }
 
-/* ===========================
-   KONTAKT
-=========================== */
+/* KONTAKT - mobil først */
 .kontakt {
   padding: 4rem 2rem;
   max-width: 600px;
@@ -154,7 +145,6 @@ footer {
   color: var(--text);
 }
 
-/* Formular */
 .formular-gruppe {
   display: flex;
   flex-direction: column;
@@ -216,14 +206,7 @@ textarea {
   border-bottom: 1px solid var(--accent);
 }
 
-/* MOBIL */
-@media (min-width: 768px) {
-  .hero h1 {
-    font-size: 12rem;
-  }
-}
-
-/* PROJEKTER */
+/* PROJEKTER - mobil først */
 .projekter {
   padding: 3rem 2rem;
 }
@@ -237,21 +220,18 @@ textarea {
   text-transform: uppercase;
 }
 
-/* Tema wrapper */
 .tema-wrapper {
   margin-bottom: 3rem;
   border-bottom: 1px solid #ddd;
   padding-bottom: 3rem;
 }
 
-/* Billede og accordion side om side */
 .tema-header {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-/* Billede placeholder indtil rigtige billeder tilføjes */
 .tema-billede {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -260,7 +240,6 @@ textarea {
   border: 1px solid #ddd;
 }
 
-/* Details og summary */
 details {
   width: 100%;
 }
@@ -289,12 +268,10 @@ details[open] summary::after {
   content: "−";
 }
 
-/* Fjern standard pil i Safari */
 summary::-webkit-details-marker {
   display: none;
 }
 
-/* Indhold der folder ud */
 .accordion-indhold {
   padding: 1.5rem 0;
   display: flex;
@@ -328,8 +305,58 @@ summary::-webkit-details-marker {
   font-size: 1rem;
 }
 
-/* DESKTOP - om mig */
+/* SLIDESHOW - mobil først */
+.slideshow {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.slide.aktiv {
+  display: block;
+}
+
+.slideshow-knapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+
+.slide-knap {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--accent);
+  padding: 0;
+}
+
+.slide-knap:hover {
+  opacity: 0.7;
+}
+
+/* DESKTOP - min-width: 768px */
 @media (min-width: 768px) {
+  /* Hero */
+  .hero h1 {
+    font-size: 12rem;
+  }
+
+  /* Om mig */
   .ommig {
     flex-direction: row;
     align-items: flex-start;
@@ -343,6 +370,7 @@ summary::-webkit-details-marker {
     gap: 2rem;
     flex: 1;
   }
+
   .ommig-tekst {
     flex: 1;
   }
@@ -360,81 +388,31 @@ summary::-webkit-details-marker {
     font-size: 3rem;
   }
 
-  @media (min-width: 768px) {
-    .kontakt {
-      padding: 4rem;
-    }
-
-    .kontakt h2 {
-      font-size: 3rem;
-    }
+  /* Kontakt */
+  .kontakt {
+    padding: 4rem;
   }
 
-  /* billeder til projekter */
+  .kontakt h2 {
+    font-size: 3rem;
+  }
+
+  /* Projekter */
+  .projekter h1 {
+    font-size: 5rem;
+  }
+
+  .tema-header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
   .slideshow {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
   }
 
-  .slides {
-    position: relative;
-    width: 100%;
-  }
-
-  .slide {
-    display: none;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-  }
-
-  .slide.aktiv {
-    display: block;
-  }
-
-  .slideshow-knapper {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 0;
-    width: 100%;
-  }
-
-  .slide-knap {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--accent);
-    padding: 0;
-  }
-
-  .slide-knap:hover {
-    opacity: 0.7;
-  }
-
-  /* DESKTOP - projekter */
-  @media (min-width: 768px) {
-    .tema-header {
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 3rem;
-    }
-
-    .tema-billede {
-      width: 40%;
-      flex-shrink: 0;
-      aspect-ratio: 4 / 3;
-    }
-
-    details {
-      flex: 1;
-    }
-
-    .projekter h1 {
-      font-size: 5rem;
-    }
+  details {
+    flex: 1;
   }
 }
