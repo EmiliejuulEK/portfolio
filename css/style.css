@@ -84,7 +84,7 @@ footer {
 
 .ommig-tekst p {
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.8;
   color: var(--accent);
 }
@@ -320,8 +320,9 @@ summary::-webkit-details-marker {
 .slide {
   display: none;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  height: 400px;
+  object-fit: contain;
+  background-color: var(--bg-light);
 }
 
 .slide.aktiv {
@@ -368,7 +369,7 @@ summary::-webkit-details-marker {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    flex: 1;
+    flex: 2;
   }
 
   .ommig-tekst {

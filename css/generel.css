@@ -109,7 +109,6 @@ nav {
 /* FOOTER — mobil først */
 footer {
   padding: 2rem;
-  text-align: center;
   font-family: var(--font-body);
   font-size: 0.9rem;
 }
